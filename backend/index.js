@@ -15,8 +15,8 @@ import contactRoute from './src/routes/contactus.routes.js';
 
 
 
-const app=express()
-const Port=7822 || process.env.PORT
+const app = express()
+const Port = 7822 || process.env.PORT
 
 dotenv.config();
 
@@ -26,16 +26,16 @@ app.use(cors())
 mongo_connect()
 
 
-app.use('/api',AuthRoutes)
-app.use('/sigin',AuthRoutes)
+app.use('/api', AuthRoutes)
+app.use('/sigin', AuthRoutes)
 
 
-app.use('/ipa',loanroutes)
-app.use('/Api',imageRoute)
+app.use('/ipa', loanroutes)
+app.use('/Api', imageRoute)
 
-    // app.use('/us',router)
-    // app.use("/pai", router);
-    app.use('/pia',contactRoute)
+// app.use('/us',router)
+// app.use("/pai", router);
+app.use('/pia', contactRoute)
 
 
 
