@@ -16,7 +16,7 @@ import contactRoute from './src/routes/contactus.routes.js';
 
 
 const app=express()
-const Port=7822
+const Port=7822 || process.env.PORT
 
 dotenv.config();
 
